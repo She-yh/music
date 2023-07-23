@@ -249,18 +249,8 @@ export default {
           </div>
         </div>
         <div id="controls-bottom">
-          <div
-            v-for="(item, index) of filters"
-            :key="index"
-            class="slider-container"
-          >
-            <el-slider
-              vertical
-              height="200px"
-              v-model="item.gain"
-              :min="-40"
-              :max="40"
-            />
+          <div v-for="(item, index) of filters" :key="index" class="slider-container">
+            <el-slider vertical height="200px" v-model="item.gain" :min="-40" :max="40" />
             <span>{{ item.name }}</span>
           </div>
         </div>
@@ -268,16 +258,10 @@ export default {
     </section>
 
     <audio id="audio" loop crossOrigin="anonymous"></audio>
-    <el-dialog
-      v-model="dialogVisible"
-      :show-close="false"
-      width="300px"
-      :close-on-click-modal="false"
-      :close-on-press-escape="false"
-      center
-    >
+    <el-dialog v-model="dialogVisible" :show-close="false" width="300px" :close-on-click-modal="false"
+      :close-on-press-escape="false" center>
       <template #header> 介绍 </template>
-      这将是一个音频处理网站，但尚在测试中，只开放部分功能，因为和声道相关，建议佩戴耳机使用。<br />
+      这将是一个音频处理网站，但尚在测试中，只开放部分功能，建议佩戴耳机使用。<br />
       <br />
       <br />
       现在开始体验吧！
@@ -294,34 +278,41 @@ export default {
 #input {
   display: none;
 }
+
 .slider-demo-block {
   width: 80px;
 }
+
 #down-container {
   display: flex;
   height: 350px;
   width: calc(100% - 32px);
   padding: 16px;
 }
+
 @media screen and (max-width: 400px) {
   #down-container {
     flex-direction: column;
   }
+
   #fftBar {
     height: 200px;
   }
 }
+
 #fftBar {
   box-shadow: 0 0 18px 5px rgb(83 83 83 / 20%);
   margin-right: 16px;
   height: 350px;
   flex: 0.5;
 }
+
 .slider-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 #controls-container {
   display: flex;
   min-width: 350px;
@@ -330,19 +321,23 @@ export default {
   justify-content: space-evenly;
   box-shadow: 0 0 18px 5px rgb(83 83 83 / 20%);
 }
+
 #controls-top {
   display: flex;
   justify-content: center;
 }
+
 #controls-middle {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
+
 #controls-bottom {
   display: flex;
   justify-content: space-evenly;
 }
+
 #upload {
   box-shadow: 0 0 18px 5px rgb(83 83 83 / 20%);
   background-color: rgb(55, 55, 55);
@@ -351,16 +346,19 @@ export default {
   width: 80px;
   border: 0;
 }
+
 .mainContainer {
   display: flex;
   flex-direction: column;
 }
+
 #waveContainer {
   box-shadow: 0 0 18px 5px rgb(83 83 83 / 20%);
   width: calc(100%-32px);
   border-radius: 5px;
   margin: 16px;
 }
+
 .stereo-controler {
   display: flex;
   width: 180px;
