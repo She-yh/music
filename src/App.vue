@@ -16,8 +16,7 @@ echarts.use([
   CanvasRenderer,
   DataZoomComponent,
 ]);
-let musicUrl =
-  "/The_greatest_works.mp3";
+let musicUrl = "The_greatest_works.mp3";
 var audio, ctx, wavesurfer, panNode, biquadFilter;
 var chartDom, myChart;
 var dataAxis = new Array(64).fill(0).map((item, index) => (item = index));
