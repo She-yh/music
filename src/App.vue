@@ -17,7 +17,7 @@ echarts.use([
   DataZoomComponent,
 ]);
 let musicUrl =
-  "https://mypage-1304169477.cos.ap-shanghai.myqcloud.com/The%20greatest%20works.mp3";
+  "/The_greatest_works.mp3";
 var audio, ctx, wavesurfer, panNode, biquadFilter;
 var chartDom, myChart;
 var dataAxis = new Array(64).fill(0).map((item, index) => (item = index));
